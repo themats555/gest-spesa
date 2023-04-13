@@ -7,7 +7,17 @@ public class Prodotto {
 	public double prezzo;
 	public String unita_di_misura;
 	public String origine;
-	public String qualita;
+	public int qualita;
+	
+	public Prodotto(int i, String string, double d, String string2, String string3, int j) {
+		id = i;
+		nome = string;
+		prezzo = d;
+		unita_di_misura = string2;
+		origine = string3;
+		qualita = j;
+	}
+	
 	public int getId() {
 		return id;
 	}
@@ -38,10 +48,10 @@ public class Prodotto {
 	public void setOrigine(String origine) {
 		this.origine = origine;
 	}
-	public String getQualita() {
+	public int getQualita() {
 		return qualita;
 	}
-	public void setQualita(String qualita) {
+	public void setQualita(int qualita) {
 		this.qualita = qualita;
 	}
 }

@@ -5,6 +5,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -38,13 +39,13 @@ public class AdminProdottoController {
 	}
 	
 	@RequestMapping(value = "/admin/api/prodotto", method = RequestMethod.POST)
-	public Prodotto create(Prodotto prodotto) {
+	public Prodotto create(@RequestBody Prodotto prodotto) {
 		
 		return prodottoService.create(prodotto);
 	}
 	
 	@RequestMapping(value = "/admin/api/prodotto/{id}", method = RequestMethod.PUT)
-	public Prodotto update(@PathVariable int id, Prodotto prodotto) {
+	public Prodotto update(@PathVariable int id, @RequestBody Prodotto prodotto) {
 		
 		Optional<Prodotto> updatedProdotto = prodottoService.update(id, prodotto);
 		

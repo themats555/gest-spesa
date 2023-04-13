@@ -1,7 +1,7 @@
 package com.interni.gestionale.model;
 
 public class Prodotto {
-
+	
 	private int id;
 	public String nome;
 	public double prezzo;
@@ -44,6 +44,4 @@ public class Prodotto {
 	public void setQualita(String qualita) {
 		this.qualita = qualita;
 	}
-	
-	
 }

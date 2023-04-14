@@ -16,6 +16,10 @@ import com.interni.gestionale.service.IProdottoService;
 @RestController
 public class AdminProdottoController {
 	
+	//Autowired permette di instanziare l'oggetto semplicemente dichiarandolo, esso verrà instanziato
+	//nella classe a cui punta il Qualifier. Questo e' un servizio di spring che inietta il service
+	//dentro il controllo (Dependency Injection)
+	
 	@Autowired
 	@Qualifier("mainProdottoService")
 	private IProdottoService prodottoService;
